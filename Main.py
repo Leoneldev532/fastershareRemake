@@ -1,35 +1,34 @@
 import customtkinter
 import tkinter
 from Modules.Accueil import Accueil
+from Modules.Header import Header
 import threading
 
 Fenetre = customtkinter.CTk(fg_color="#131f2a")
 Fenetre.title('FasterShare')
-            
+# Fenetre.overrideredirect(True)
 Largeur = Fenetre.winfo_screenwidth()
 Hauteur = Fenetre.winfo_screenheight()
+Fenetre.minsize(1000, 200)
 
-# Largeur = 650
-# Hauteur = 400
+x = 0
+y = 0
 
+def clickwin(event):
+    global x, y
+    x = event.x
+    y = event.y
 
-# Fenetre.geometry("%dx%d" % (Largeur, Hauteur))
+def dragwin(event):
+    global x, y
+    new_x = Fenetre.winfo_x() - x + event.x
+    new_y = Fenetre.winfo_y() - y + event.y
+    Fenetre.geometry("+%s+%s" % (new_x, new_y))
 
-# # Fenetre.iconbitmap("Image/logo.ico")
+Fenetre.bind("<Button-1>", clickwin)
+Fenetre.bind("<B1-Motion>", dragwin)
 
-# Logo =  customtkinter.CTkFrame(Fenetre, width=Largeur, corner_radius=0, fg_color="#0E1C2A")
-# Logo.pack(side="top", fill='y')
-
-
-# Chargement =  customtkinter.CTkFrame(Fenetre, height=50, corner_radius=0, fg_color="#0E1C2A")
-# Chargement.pack(side="bottom", fill="x", ipady=5)
-
-# NomApp = customtkinter.CTkLabel(Chargement, text="FASTERSHARE", text_color="white", font=("bodoni mt",18,"bold"))
-# NomApp.pack(side="right", padx=10)
-
-
-
-# Accueil
+Header(Fenetre)
 Accueil(Fenetre)
 
 Fenetre.mainloop()

@@ -12,9 +12,6 @@ class Accueil():
         Menu.grid_propagate(0)
         Menu.pack(side="left", fill='y', padx=10, pady=10)
         
- 
-
-
         Modules =  customtkinter.CTkFrame(Parent, height=Parent._current_height,width=Parent._current_width,border_width=2,border_color="#252c32",fg_color="#252c32")
         Modules.pack(side="top", fill="x", padx=10, pady=10)
         Modules.grid_propagate(0)
