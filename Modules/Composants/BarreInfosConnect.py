@@ -2,11 +2,12 @@ import customtkinter
 from customtkinter.windows.widgets import CTkFrame, CTkLabel
 
 class BarreInfoConnect(customtkinter.CTkFrame):
-   def __init__(self, Parent):
-       super().__init__(Parent)
 
-       ligneOne = customtkinter.CTkFrame(self, height=40, corner_radius=10, bg_color="white", fg_color="black")
-       ligneOne.pack(side="top", pady=(0,14), fill="x", padx=10)
+    Nom = ""
 
-       nbreconnect = customtkinter.CTkLabel(ligneOne, text="Nombre de connexion : 10", font=("Roboto", 12), fg_color="black", bg_color="white")
-       nbreconnect.pack(side="left", padx=(10,0))
+    def __init__(self, Parent,data):
+        super().__init__(Parent)
+            
+        self.configure(Parent, height=50, width=450,fg_color="red",corner_radius=24 )
+        self.pack(side="right", pady=(20, 5), padx=10)
+        
