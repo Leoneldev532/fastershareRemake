@@ -18,7 +18,7 @@ def clickwin(event):
     global x, y
     x = event.x
     y = event.y
-
+ 
 def dragwin(event):
     global x, y
     new_x = Fenetre.winfo_x() - x + event.x
