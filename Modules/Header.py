@@ -32,6 +32,6 @@ class Header():
 
        NameApp(Frame1,"fsoo").pack(fill='both', expand=True)
        BarreInfoConnect(Frame2,"dqtq").pack(fill='both', expand=True)
-       WindowBtnChose(Frame3,"lkdsjfk").pack(fill='both', expand=True)
+       WindowBtnChose(Frame3,"lkdsjfk").pack(fill='both',side="right")
 
         
