@@ -11,13 +11,13 @@ Largeur = Fenetre.winfo_screenwidth()
 Hauteur = Fenetre.winfo_screenheight()  
 Fenetre.minsize(1000, 700)
 
-x = 0
+x = 0   
 y = 0
 
 def clickwin(event):
     global x, y
     x = event.x
-    y = event.y
+    y = event.y 
  
 def dragwin(event):
     global x, y 
@@ -25,7 +25,7 @@ def dragwin(event):
     new_y = Fenetre.winfo_y() - y + event.y 
 
 Fenetre.bind("<Button-1>", clickwin)
-Fenetre.bind("<B1-Motion>", dragwin)
+Fenetre.bind("<B1-Motion>", dragwin)    
 
 Header(Fenetre)
 Accueil(Fenetre)

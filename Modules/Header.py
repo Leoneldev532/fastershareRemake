@@ -23,7 +23,7 @@ class Header():
        Frame1.pack(side="left", fill='x', expand=True)
 
        Frame2 = customtkinter.CTkFrame(FrameMenu,fg_color='transparent', height=45)
-       Frame2.pack(side="left", fill='x', expand=True)
+       Frame2.pack(side="left", fill='x', expand=True,)
 
        Frame3 = customtkinter.CTkFrame(FrameMenu,fg_color='transparent',height=45,width=300)
        Frame3.pack(side="left", fill='x', expand=True)

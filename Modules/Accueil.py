@@ -26,7 +26,7 @@ class Accueil():
     def Menu(self, FrameMenu):
         Menu1 = ComposantMenu(FrameMenu, "MENU TEST")
         Menu2 = ComposantMenu(FrameMenu, "HELLO")
-        Infouserk = Infouser(FrameMenu,"192.258.25.25","dorval")
+        Infouserk = Infouser(FrameMenu,"🎰 192.258.25.25",("👨  dorval         "))
 
     def Contain(self,Contentplace,widthcontainer):
         data = [
